@@ -1,5 +1,5 @@
 # William Price — Personal Website
 
-A static personal website organized around four sections: Résumé, Serve, Build, and Contact.
+A static personal website organized around two sections: Résumé and Contact.
 
-The résumé is the landing page. Serve and Build currently establish the visual direction and will grow into project collections. The site is deployed to GitHub Pages through the workflow in `.github/workflows/static.yml`.
+The résumé is the landing page and uses two mirrored bands: compact information and hand-drawn-artifact blocks paired with large photographs. The site is deployed to GitHub Pages through the workflow in `.github/workflows/static.yml`.
