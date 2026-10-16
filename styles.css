@@ -551,8 +551,62 @@ a { color: inherit; }
 
 .composition-page {
     width: 100%;
-    padding: clamp(96px, 15vh, 180px) 0 clamp(120px, 18vh, 220px);
+    padding: clamp(48px, 8vh, 96px) 0 clamp(120px, 18vh, 220px);
     overflow: hidden;
+}
+
+.profile-intro {
+    width: min(88vw, 1180px);
+    margin: 0 auto clamp(18px, 2.6vw, 42px) 4vw;
+    padding: clamp(30px, 4.5vw, 68px);
+    border: 2px solid var(--study-line);
+    color: var(--study-grey);
+    background: var(--study-charcoal);
+    box-shadow: 14px 14px 0 rgba(15, 16, 15, 0.58);
+}
+
+.profile-kicker {
+    margin: 0 0 clamp(24px, 4vw, 54px);
+    font-size: 0.68rem;
+    font-weight: 900;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
+.profile-intro h1 {
+    max-width: 12ch;
+    margin: 0;
+    font: 400 clamp(2.8rem, 6.5vw, 7.2rem)/0.92 var(--serif);
+    letter-spacing: -0.055em;
+}
+
+.profile-details {
+    margin: clamp(40px, 7vw, 92px) 0 0;
+    border-top: 1px solid rgba(201, 201, 196, 0.48);
+}
+
+.profile-details div {
+    padding: 16px 0;
+    border-bottom: 1px solid rgba(201, 201, 196, 0.48);
+    display: grid;
+    grid-template-columns: minmax(90px, 0.28fr) minmax(0, 1fr);
+    gap: 20px;
+}
+
+.profile-details dt,
+.profile-details dd {
+    margin: 0;
+}
+
+.profile-details dt {
+    font-size: 0.7rem;
+    font-weight: 900;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.profile-details dd {
+    font: italic clamp(1rem, 1.8vw, 1.45rem) var(--serif);
 }
 
 .tile-group {
@@ -919,7 +973,7 @@ a { color: inherit; }
 }
 
 .contact-composition {
-    min-height: calc(100vh - 80px);
+    min-height: 100vh;
     padding: clamp(72px, 12vh, 140px) 5vw;
     display: grid;
     place-items: center;
@@ -934,10 +988,8 @@ a { color: inherit; }
 }
 
 @media (max-width: 900px) {
-    .composition-header { position: relative; }
-
     .composition-page {
-        padding-top: clamp(72px, 11vh, 110px);
+        padding-top: clamp(42px, 7vh, 72px);
         padding-bottom: clamp(84px, 13vh, 140px);
     }
 
@@ -949,6 +1001,13 @@ a { color: inherit; }
     .tile-group {
         width: 90vw;
         gap: clamp(12px, 2.6vw, 24px);
+    }
+
+    .profile-intro {
+        width: 90vw;
+        margin-left: 3vw;
+        margin-bottom: clamp(12px, 2.6vw, 24px);
+        box-shadow: 10px 10px 0 rgba(15, 16, 15, 0.58);
     }
 
     .tile-group + .tile-group {
@@ -973,7 +1032,7 @@ a { color: inherit; }
         margin-right: auto;
     }
 
-    .contact-composition { min-height: calc(100vh - 116px); }
+    .contact-composition { min-height: 100vh; }
 
     .contact-tile {
         width: 90vw;
@@ -983,11 +1042,25 @@ a { color: inherit; }
 }
 
 @media (max-width: 580px) {
-    .composition-page { padding-top: 9vh; }
+    .composition-page { padding-top: 6vh; }
 
     .tile-group {
         width: 92vw;
         gap: 11px;
+    }
+
+    .profile-intro {
+        width: 92vw;
+        margin-left: 3vw;
+        margin-bottom: 11px;
+        padding: 28px 22px;
+        border-width: 1px;
+        box-shadow: 7px 7px 0 rgba(15, 16, 15, 0.64);
+    }
+
+    .profile-details div {
+        grid-template-columns: 1fr;
+        gap: 5px;
     }
 
     .tile-group + .tile-group { margin-top: 11px; }
@@ -1057,7 +1130,7 @@ a { color: inherit; }
     .photo-grid { gap: 5px; }
 
     .contact-composition {
-        min-height: calc(100vh - 116px);
+        min-height: 100vh;
         padding: 9vh 4vw;
     }
 
