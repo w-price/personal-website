@@ -6,8 +6,8 @@
     --red: #b93729;
     --blue: #315b99;
     --line: rgba(24, 32, 29, 0.34);
-    --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    --serif: Georgia, "Times New Roman", serif;
+    --sans: "PT Mono", "Courier New", monospace;
+    --serif: "PT Mono", "Courier New", monospace;
 }
 
 * { box-sizing: border-box; }
